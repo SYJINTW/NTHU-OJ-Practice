@@ -1,5 +1,4 @@
 // https://acm.cs.nthu.edu.tw/problem/10972/
-// 只過 3/4 的測資
 // 正常來說要用 tree，但是好像有點麻煩
 
 #include <stdio.h>
@@ -37,6 +36,11 @@ int main()
             {
                 B[i] = 0;
                 fakeStack[now++] = 0; 
+            }
+            else if((S[i+1]=='A'||S[i+1]=='B'||S[i+1]=='C'||S[i+1]=='D') && S[i+2]==')')
+            {
+                B[i] = 0;
+                fakeStack[now++] = 0;   
             }
             else
             {
